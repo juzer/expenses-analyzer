@@ -1,0 +1,6 @@
+/venv
+/.idea
+*.txt
+*.html
+*.pyc
+!requirements.txt
