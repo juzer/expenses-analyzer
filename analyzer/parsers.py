@@ -18,5 +18,6 @@ class SabadellParser(AbstractParser):
     def parse(self):
         result = []
         for row in csv.reader(open(self.file_path, 'rb'), delimiter='|'):
-            result.append(self.converter.convert_row(row))
+            if not row[0].startswith("#"):
+                result.append(self.converter.convert_row(row))
         return result
